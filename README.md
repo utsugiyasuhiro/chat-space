@@ -21,7 +21,7 @@ has_many :messages
 belongs_to :group
 belongs_to :user
 
-##groupsテーブル
+##usersテーブル
 
 |Column| Type |Options|
 |group_name| string| null: false, unique: true|
