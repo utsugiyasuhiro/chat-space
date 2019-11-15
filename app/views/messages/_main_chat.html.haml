@@ -11,20 +11,13 @@
       .right-header__button
         Edit
   .messages
-    .message
-      .upper-message
-        .upper-message__user-name
-          明日
-          .upper-message__date
-            2019/11/12
-        .lower-meesage
-          .lower-message__content
-            明後日
+    = render @messages
+
   .form
     %form
-      %input.form__message
-      .form__mask
-        %label.form__mask__image
+      %input.form_message
+      .form_mask
+        %label.form_mask_image
           = fa_icon 'picture-o', class: 'icon'
           %input.hidden{type: 'file'}
-      %input.form__submit{type: 'submit', value: 'Send'}
+      %input.form_submit{type: 'submit', value: 'Send'}
