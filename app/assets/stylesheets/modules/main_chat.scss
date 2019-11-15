@@ -71,18 +71,18 @@
     box-sizing: border-box;
     height: 90px;
     padding: 20px 50px 20px 40px;
-    &__message {
+    &_message {
       border: none;
       float: left;
       height: 50px;
       width: calc(100% - 150px);
     }
-    &__mask {
+    &_mask {
       background-color: #fafafa;
       float: left;
       height: 50px;
       padding-right: 10px;
-      &__image {
+      &_image {
         font-size: 20px;
         line-height: 50px;
       }
@@ -90,7 +90,7 @@
         display: none;
       }
     }
-    &__submit {
+    &_submit {
       background-color: #38aef0;
       border: none;
       color: #fafafa;
