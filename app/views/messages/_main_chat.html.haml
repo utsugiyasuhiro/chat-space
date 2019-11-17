@@ -9,7 +9,7 @@
           メンバー名
     .right-header
       .right-header__button
-        Edit
+        = link_to "Edit", edit_group_path(params[:group_id]), method: :get do
   .messages
     = render @messages
 
