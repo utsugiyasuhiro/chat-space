@@ -2,22 +2,26 @@
   .header
     .left-header
       .left-header__title
-        グループ名
+        =@group.name
       %ul.left-header__members
-        Member：
-        %li.member
-          メンバー名
+        Member:
+        -@group.users.each do |user|
+          .member
+            = user.name
+          
     .right-header
       .right-header__button
-        = link_to "Edit", edit_group_path(params[:group_id]), method: :get do
+      = link_to "Edit", edit_group_path(params[:group_id]), method: :get 
   .messages
     = render @messages
-
+      
   .form
-    %form
-      %input.form_message
-      .form_mask
-        %label.form_mask_image
-          = fa_icon 'picture-o', class: 'icon'
-          %input.hidden{type: 'file'}
-      %input.form_submit{type: 'submit', value: 'Send'}
+    .form-new
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form_message', placeholder: 'type a message'
+
+        .form_mask
+          = f.label :image, class: 'form_mask_image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden' 
+        = f.submit 'Send', class: 'form_submit' 
