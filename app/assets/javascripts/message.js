@@ -53,7 +53,7 @@ $(function(){
 
       $.ajax({ 
         url: "api/messages", 
-        type: 'get', 
+        type: 'GET', 
         dataType: 'json', 
         data: {last_id: last_message_id} 
       })
