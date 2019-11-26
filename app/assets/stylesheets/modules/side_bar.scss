@@ -2,9 +2,9 @@
   float:rigth;
   .header {
     background-color: #253141;
-    color: #ffff;
+    color: #ffffff;
     width:300px;
-    height: 100px;
+    height: 110px;
     line-height: 100px;
     padding: 0 20px;
     &__name {
@@ -13,6 +13,7 @@
       font-weight: bold;
     }
     &__lists {
+      color: #ffffff;
       display: inline-block;
       float: right;
       .list {
@@ -26,9 +27,9 @@
   }
 
   .groups {
-    overflow: hidden;
+    overflow: scroll;
     background-color: #363e49;
-    color: #ffff;
+    color: #fff;
     width: 300px;
     height: calc(100vh - 100px);
     padding: 0 20px;
@@ -36,9 +37,11 @@
       box-sizing: border-box;
       padding: 20px 0 40px;
       &__name {
+        color:#fff;
       }
       &__message {
         margin-top: 5px;
+        color:#fff;
       }
     }
   }
